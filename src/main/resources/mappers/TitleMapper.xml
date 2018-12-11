@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.yi.erd_exam.dao.TitleMapper">
+	<insert id="insertTitle" parameterType="Title">
+		INSERT INTO title (no, titleName) VALUES(#{no}, #{titleName});
+	</insert>
+
+	<select id="selectTitleByAll" resultType="Title">
+		SELECT no, titleName
+		FROM
+		title;
+	</select>
+
+	<select id="selectTitleByCode" resultType="Title"
+		parameterType="Title">
+		SELECT no, titleName
+		FROM title
+		WHERE no = #{no};
+	</select>
+
+	<delete id="deleteTitle">
+		DELETE FROM title
+		WHERE no = #{param1};
+	</delete>
+
+	<update id="updateTitle" parameterType="Title">
+		UPDATE title
+		SET titleName =
+		#{titleName}
+		WHERE no = #{no};
+	</update>
+</mapper>

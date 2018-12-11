@@ -1,0 +1,45 @@
+CREATE USER 'user_ncs_test'@'%';
+ALTER USER 'user_ncs_test'@'%'
+IDENTIFIED BY 'rootroot' ;
+GRANT Alter ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Create ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Create view ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Delete ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Drop ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Grant option ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Index ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Insert ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT References ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Select ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Show view ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Trigger ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Update ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Alter routine ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Create routine ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Create temporary tables ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Execute ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+GRANT Lock tables ON ncs_test_kbm.* TO 'user_ncs_test'@'%';
+FLUSH PRIVILEGES;
+
+CREATE USER 'user_ncs_test'@'localhost';
+ALTER USER 'user_ncs_test'@'localhost'
+IDENTIFIED BY 'rootroot' ;
+GRANT Alter ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Create ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Create view ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Delete ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Drop ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Grant option ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Index ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Insert ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT References ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Select ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Show view ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Trigger ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Update ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Alter routine ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Create routine ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Create temporary tables ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Execute ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+GRANT Lock tables ON ncs_test_kbm.* TO 'user_ncs_test'@'localhost';
+FLUSH PRIVILEGES;
