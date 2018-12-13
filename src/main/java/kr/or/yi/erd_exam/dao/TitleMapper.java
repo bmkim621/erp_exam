@@ -11,7 +11,7 @@ public interface TitleMapper {
 	
 	int insertTitle(Title title);
 	
-	int deleteTitle(int code);
+	int deleteTitle(Title title);
 	
 	int updateTitle(Title title);
 }

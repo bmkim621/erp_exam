@@ -1,7 +1,5 @@
 package kr.or.yi.erd_exam;
 
-import static org.junit.Assert.*;
-
 import java.util.List;
 
 import org.junit.Assert;
@@ -22,7 +20,7 @@ public class TitleDaoTest extends AbstractTest {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		
 		Title title = new Title();
-		title.setNo(5);
+		title.setNo("T005");
 		title.setTitleName("인턴");
 		
 		int res = titleDao.insertTitle(title);
@@ -42,7 +40,7 @@ public class TitleDaoTest extends AbstractTest {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		
 		Title title = new Title();
-		title.setNo(5);
+		title.setNo("T005");
 		Title searchTitle = titleDao.selectTitleByCode(title);
 		Assert.assertNotNull(searchTitle);
 		
@@ -54,7 +52,7 @@ public class TitleDaoTest extends AbstractTest {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		
 		Title title = new Title();
-		title.setNo(5);
+		title.setNo("T005");
 		title.setTitleName("무기계약직");
 		int res = titleDao.updateTitle(title);
 		Assert.assertEquals(1, res);
@@ -64,7 +62,8 @@ public class TitleDaoTest extends AbstractTest {
 	public void test05deleteTitle() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		
-		int res = titleDao.deleteTitle(5);
+		Title delTitle = new Title("T005");
+		int res = titleDao.deleteTitle(delTitle);
 		Assert.assertEquals(1, res);
 	}
 

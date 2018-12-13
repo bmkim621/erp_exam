@@ -1,13 +1,21 @@
 package kr.or.yi.erd_exam.dto;
 
 public class Title {
-	private int no;
+	private String no;
 	private String titleName;
 	
-	public int getNo() {
+	public Title() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Title(String no) {
+		this.no = no;
+	}
+	
+	public String getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(String no) {
 		this.no = no;
 	}
 	public String getTitleName() {

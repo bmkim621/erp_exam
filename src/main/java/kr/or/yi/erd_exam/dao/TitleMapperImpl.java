@@ -34,9 +34,9 @@ public class TitleMapperImpl implements TitleMapper {
 	}
 
 	@Override
-	public int deleteTitle(int code) {
+	public int deleteTitle(Title title) {
 		try(SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()){
-			int res = sqlSession.delete(namespace + ".deleteTitle", code);
+			int res = sqlSession.delete(namespace + ".deleteTitle", title);
 			sqlSession.commit();
 			return res;
 		}
